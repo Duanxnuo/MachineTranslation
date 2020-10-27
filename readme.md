@@ -1,4 +1,4 @@
-## Project Goal
+## Project Overall
 For this project, we tried natural language processing on over 500,000 pairs of English and Chinese sentences. The goal is to build a villina machine translation programme and try out the four different Chinese word seperating systems to see which one performs better.
 
 The results were evaluated by cross entropy and pkuseg turns out to be the best one, although there wasn't any big differences between these four systems because of the language material was carefully scrutinized by us and was labeled by different domain, so the machine translation machanism a.k.a. the LSTM model with attention was smart enough to do a mostly accurate translation. But we also thinks that when the language material wasn't looked at and was performed translation on in their raw state, the scaling up process would require a better word seperating system. 
@@ -24,7 +24,7 @@ AWS S3/EC2, Python 3.7, Spark 2.2.3, TensorFlow 2.1.0, Keras 2.2.0
 
 
 
-### Materials from Google's LSTM Paper
+## Materials from Google's LSTM Paper
 Our model consists of a deep LSTM network with 8 encoder and 8 decoder layers using attention and residual connections.
 
 To improve parallelism and therefore decrease training time, our attention mechanism connects the bottom layer of the decoder to the top layer of the encoder. 
